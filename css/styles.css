@@ -137,13 +137,18 @@ img {
   background-color: rgba(0, 186, 252, 0.6);
   border-color:rgba(0, 186, 252, 0.6);
 }
+.has-dropdown-item {
+  
+}
 .dropdown-list {
+  position: absolute;
+  z-index: 1;
+  top: 100%;
   background-color: #fff;
   margin: 0;
-  margin-top: 16px;
-  padding: 0;
+  padding: 16px;
   list-style-type: none;
 }
-.dropdown-item {
+.dropdown-item:not(:last-child) {
   margin-bottom: 16px;
 }

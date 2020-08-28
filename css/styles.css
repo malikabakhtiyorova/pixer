@@ -93,13 +93,17 @@ img {
 }
 .pixer-nav-item {
   border-bottom: 3px solid transparent;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease,
+    border-bottom-color 0.3s ease;
 }
 .pixer-nav-item:hover {
-  border-bottom: 3px solid #191919;
+  border-bottom-color: #191919;
 }
 .pixer-nav-item:active {
   background-color: rgba(25, 25, 25, 0.7);
+}
+.pixer-nav-item:active .pixer-nav-link {
+  color: #FFFFFF;
 }
 .pixer-nav-link {
   display: inline-block;
@@ -109,9 +113,6 @@ img {
   line-height: 24px;
   padding: 16px;
   transition: color 0.3s ease;
-}
-.pixer-nav-link:active {
-  color: #FFFFFF;
 }
 .pixer-header-tel {
   display: inline-block;

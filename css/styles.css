@@ -18,6 +18,7 @@
 
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -419,14 +420,21 @@ img {
   margin-bottom: 0;
 }
 
+/* STAGES ================================================ */
+
 .stage {
-  display: flex;
   padding-top: 60px;
-  justify-content: space-evenly;
-  align-items: center;
 }
 
-.stage:nth-child(2n){
+.stage-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.stage:nth-child(2n) .stage-content {
   flex-direction: row-reverse;
 }
 
@@ -434,7 +442,46 @@ img {
   padding: 0 50px 50px 50px;
 }
 
-.stage-content {
+.stage-content::before {
+  content:"";
+  display: inline-block;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.stage:nth-child(1) .stage-content::before {
+  background-image: url(../img/step-illustration7.svg);
+  width: 300px;
+  height: 277px;
+}
+
+.stage:nth-child(2) .stage-content::before {
+  background-image: url(../img/step-illustration.svg);
+  width: 300px;
+  height: 224px;
+}
+
+.stage:nth-child(3) .stage-content::before {
+  background-image: url(../img/step-illustration2.svg);
+  width: 300px;
+  height: 258px;
+}
+
+.stage:nth-child(4) .stage-content::before {
+  background-image: url(../img/step-illustration4.svg);
+  width: 300px;
+  height: 170px;
+}
+
+.stage:nth-child(5) .stage-content::before {
+  background-image: url(../img/step-illustration25.svg);
+  width: 300px;
+  height: 232px;
+}
+
+.stage-content-inner {
   width: 490px;
 }
 
